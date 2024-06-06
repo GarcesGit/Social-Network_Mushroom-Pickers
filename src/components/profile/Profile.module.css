@@ -1,0 +1,7 @@
+.content {
+    grid-area: cont;
+}
+.profile_photo {
+    width: 150px;
+    border-radius: 50%;
+}

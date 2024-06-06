@@ -1,0 +1,6 @@
+.nav {
+    grid-area: nav;
+}
+.item {
+    font-weight: 600;
+}

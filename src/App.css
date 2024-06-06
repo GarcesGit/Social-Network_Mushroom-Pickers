@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px dotted white; */
+}
+.app-wrapper {
+    background-image: url(./pictures/ground.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: grid;
+    grid-template-areas:
+        "head head"
+        "nav cont"
+        "foot foot";
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 10px;
+}

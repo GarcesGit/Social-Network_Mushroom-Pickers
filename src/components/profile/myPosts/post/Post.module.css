@@ -1,0 +1,26 @@
+.item {
+    width: 70%;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+}
+.item_content {
+    display: flex;
+}
+.profile_ava {
+    width: 40px;
+    border-radius: 50%;
+}
+.message {
+    padding: 5px;
+}
+.like {
+    width: 40px;
+    margin-top: 5px;
+    padding: 2px;
+    border-radius: 10%;
+    background-color: #393a3970;
+    text-align: start;
+}

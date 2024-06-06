@@ -1,0 +1,27 @@
+.header {
+    grid-area: head;
+    display: flex;
+}
+
+@keyframes animation-logo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+    animation: animation-logo infinite 20s linear;
+}
+
+.title {
+    font: bold 40px "Segoe UI";
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 1.5px #74c26e;
+    margin: 10px;
+}
