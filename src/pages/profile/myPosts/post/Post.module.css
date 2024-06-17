@@ -2,7 +2,6 @@
     width: 70%;
     margin-top: 5px;
     padding: 5px;
-    font-size: 14px;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 5px;
 }
@@ -21,6 +20,6 @@
     margin-top: 5px;
     padding: 2px;
     border-radius: 10%;
-    background-color: #393a3970;
+    background-color: #4d5154;
     text-align: start;
 }

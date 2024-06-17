@@ -10,7 +10,6 @@ const MyPosts = () => {
                 <div className="input-group mb-3">
                     <input
                         type="text"
-                        // className={`${"form-control"} ${cl.post_input}`}
                         className={cl.post_input}
                         placeholder="text"
                         aria-label="text"
@@ -21,8 +20,8 @@ const MyPosts = () => {
                     </button>
                 </div>
             </div>
-            <Post message="Hi, man" />
-            <Post message="How are u" />
+            <Post message="Hi, man" likesCount="0" />
+            <Post message="How are u" likesCount="3" />
         </div>
     );
 };

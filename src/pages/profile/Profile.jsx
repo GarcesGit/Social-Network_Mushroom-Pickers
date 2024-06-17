@@ -5,8 +5,8 @@ import MyPosts from "./myPosts/MyPosts";
 
 const Profile = () => {
     return (
-        <div className={cl.content}>
-            <div>
+        <div>
+            <div className={cl.item}>
                 <img src={man6} className={cl.profile_photo} />
                 Name
             </div>
