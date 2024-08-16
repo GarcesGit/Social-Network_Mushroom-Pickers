@@ -15,7 +15,6 @@ function App() {
                 <Navbar />
                 <div className="app-wrapper-content">
                     <Routes>
-                        <Route path="*" element={<Navigate to="/profile" />} />
                         <Route path="/profile" element={<Profile />} />
                         <Route path="/messages" element={<Messages />} />
                     </Routes>

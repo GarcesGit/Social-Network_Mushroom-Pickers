@@ -20,8 +20,8 @@ const MyPosts = () => {
                     </button>
                 </div>
             </div>
-            <Post message="Hi, man" likesCount="0" />
-            <Post message="How are u" likesCount="3" />
+            <Post message="Today I saw ducks" likesCount="0" />
+            <Post message="They were fat and nice" likesCount="3" />
         </div>
     );
 };

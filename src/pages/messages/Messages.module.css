@@ -2,15 +2,26 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
 }
-.dialogsItems .active {
+/* .dialogsItems .activeLink {
     color: #74c26e;
-}
+    font-weight: 500;
+} */
+
 .messages {
     width: 80%;
 }
 .background {
-    margin-top: 5px;
+    margin: 5px;
     padding: 5px;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 5px;
+}
+
+.dialog a {
+    color: black;
+    text-decoration: none;
+}
+
+.dialog a.activeLink {
+    color: white;
 }
