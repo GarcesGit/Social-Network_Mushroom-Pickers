@@ -3,10 +3,11 @@ import cl from "./Dialogs.module.css";
 import { NavLink } from "react-router-dom";
 
 const DialogItem = (props) => {
+    let path = "/dialogs/" + props.id;
     return (
         <div className={cl.dialog + " " + cl.background}>
             <NavLink
-                to={"/dialogs/" + props.id}
+                to={path}
                 className={({ isActive }) => (isActive ? cl.activeLink : null)}
             >
                 {props.name}
@@ -15,33 +16,22 @@ const DialogItem = (props) => {
     );
 };
 
+const Message = (props) => {
+    return <div className={cl.message}>{props.messageText}</div>;
+};
+
 const Dialogs = (props) => {
     return (
         <div className={cl.dialogs}>
             <div className={cl.dialogsItems}>
                 <DialogItem name="Name1" id="1" />
-
-                {/* <div className={cl.dialog + " " + cl.background}>
-                    <NavLink
-                        to="/dialogs/2"
-                        className={({ isActive }) => (isActive ? cl.activeLink : null)}
-                    >
-                        Name2
-                    </NavLink>
-                </div>
-                <div className={cl.dialog + " " + cl.background}>
-                    <NavLink
-                        to="/dialogs/3"
-                        className={({ isActive }) => (isActive ? cl.activeLink : null)}
-                    >
-                        Name3
-                    </NavLink>
-                </div> */}
+                <DialogItem name="Name2" id="2" />
+                <DialogItem name="Name3" id="3" />
             </div>
             <div className={cl.messages + " " + cl.background}>
-                <div className={cl.message}>Hi</div>
-                <div className={cl.message}>How are u</div>
-                <div className={cl.message}>Yo</div>
+                <Message messageText="Hi" />
+                <Message messageText="How are u" />
+                <Message messageText="Yo" />
             </div>
         </div>
     );

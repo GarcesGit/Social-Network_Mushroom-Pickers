@@ -1,15 +1,11 @@
 import React from "react";
-import cl from "./Profile.module.css";
-import man6 from "../../pictures/man6.jpg";
 import MyPosts from "./myPosts/MyPosts";
+import ProfileInfo from "./profileInfo/Profilenfo";
 
 const Profile = () => {
     return (
         <div>
-            <div className={cl.item + " " + cl.background}>
-                <img src={man6} className={cl.profile_photo} />
-                Name
-            </div>
+            <ProfileInfo />
             <MyPosts />
         </div>
     );
