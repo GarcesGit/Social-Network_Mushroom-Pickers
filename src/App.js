@@ -1,5 +1,5 @@
 import "./App.css";
-import Messages from "./pages/messages/Messages";
+import Dialogs from "./pages/dialogs/Dialogs";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Navbar from "./components/navbar/Navbar";
@@ -16,7 +16,7 @@ function App() {
                 <div className="app-wrapper-content">
                     <Routes>
                         <Route path="/profile" element={<Profile />} />
-                        <Route path="/messages" element={<Messages />} />
+                        <Route path="/dialogs" element={<Dialogs />} />
                     </Routes>
                 </div>
                 <Footer />
