@@ -27,7 +27,7 @@ const MyPosts = () => {
                     </button>
                 </div>
             </div>
-            <Post post="Somepost" likesCount={postsData[0].likesCount} />
+            <Post post={postsData[0].post} likesCount={postsData[0].likesCount} />
             <Post post={postsData[1].post} likesCount={postsData[1].likesCount} />
             <Post post={postsData[2].post} likesCount={postsData[2].likesCount} />
             <Post post={postsData[3].post} likesCount={postsData[3].likesCount} />

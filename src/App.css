@@ -2,12 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px dotted white; */
 }
 .app-wrapper {
-    background-image: url(./pictures/ground.jpg);
+    background: url(./pictures/ground.jpg) no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
     color: white;
     display: grid;
     grid-template-areas:
