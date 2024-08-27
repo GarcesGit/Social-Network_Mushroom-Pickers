@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 .app-wrapper {
-    background: url(./pictures/ground.jpg) no-repeat center center fixed;
-    background-size: cover;
     color: white;
     display: grid;
     grid-template-areas:
