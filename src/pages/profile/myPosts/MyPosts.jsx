@@ -14,7 +14,7 @@ const MyPosts = (props) => {
                     <input
                         type="text"
                         className={cl.post_input}
-                        placeholder="text"
+                        placeholder="my text"
                         aria-label="text"
                         aria-describedby="button-addon2"
                     />
