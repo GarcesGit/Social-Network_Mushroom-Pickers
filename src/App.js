@@ -10,21 +10,27 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 function App(props) {
     return (
         <BrowserRouter>
-            <div className="app-wrapper">
+            <div className="wrapper">
                 <Header />
                 <Navbar />
-                <div className="app-wrapper-content">
+                <main className="main">
                     <Routes>
                         <Route
                             path="/profile"
-                            element={<Profile profileState={props.state.profilePage} />}
+                            element={
+                                <Profile
+                                    profileState={props.state.profilePage}
+                                    addPost={props.addPost}
+                                    updateNewPostText={props.updateNewPostText}
+                                />
+                            }
                         />
                         <Route
                             path="/dialogs"
                             element={<Dialogs dialogsState={props.state.dialogsPage} />}
                         />
                     </Routes>
-                </div>
+                </main>
                 <Footer />
             </div>
         </BrowserRouter>

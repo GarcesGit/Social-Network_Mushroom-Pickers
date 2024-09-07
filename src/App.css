@@ -3,7 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-.app-wrapper {
+body,
+html {
+    height: 100%;
+}
+.wrapper {
     color: white;
     display: grid;
     grid-template-areas:
@@ -13,8 +17,9 @@
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
     grid-gap: 10px;
+    height: 100vh;
 }
 
-.app-wrapper-content {
+.main {
     grid-area: content;
 }

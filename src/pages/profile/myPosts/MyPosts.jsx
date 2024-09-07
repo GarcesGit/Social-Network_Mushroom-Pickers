@@ -1,26 +1,28 @@
-import React from "react";
-import cl from "./MyPosts.module.css";
+import React, { useRef } from "react";
 import Post from "./post/Post";
+import Input from "../../../components/UI/input/Input";
+import Button from "../../../components/UI/input/button/Button";
 
 const MyPosts = (props) => {
     const postElements = props.posts.map((p) => (
         <Post post={p.post} likesCount={p.likesCount} />
     ));
+    const newPostElement = useRef();
+
+    const addPosts = () => {
+        props.addPost();
+    };
+    const onInputChange = () => {
+        const text = newPostElement.current.value;
+        props.updateNewPostText(text);
+    };
     return (
         <div>
             <h3>My posts</h3>
             <div>
                 <div className="input-group mb-3">
-                    <input
-                        type="text"
-                        className={cl.post_input}
-                        placeholder="my text"
-                        aria-label="text"
-                        aria-describedby="button-addon2"
-                    />
-                    <button className="btn btn-dark" type="button" id="button-addon2">
-                        New post
-                    </button>
+                    <Input ref={newPostElement} change={onInputChange} />
+                    <Button buttonText="Click" click={addPosts} />
                 </div>
             </div>
             {postElements}

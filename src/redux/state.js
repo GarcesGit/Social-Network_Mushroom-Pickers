@@ -1,11 +1,12 @@
-let state = {
+const state = {
     profilePage: {
         posts: [
             { id: 1, post: "Yesterday I saw ducks", likesCount: 3 },
             { id: 2, post: "They were fat and nice", likesCount: 5 },
-            { id: 3, post: "Today I saw him", likesCount: 7 },
-            { id: 4, post: "The man was more respectable", likesCount: 9 },
+            { id: 3, post: "Today so cold", likesCount: 7 },
+            { id: 4, post: "and wet", likesCount: 9 },
         ],
+        newPostText: "чет",
     },
     dialogsPage: {
         dialogs: [
@@ -22,4 +23,16 @@ let state = {
         ],
     },
 };
+
+export const addPost = (postMessage) => {
+    const newPost = { id: 5, post: state.profilePage.newPostText, likesCount: 0 };
+    state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = "";
+};
+///////не очищается инпут
+
+export const updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+};
+
 export default state;
