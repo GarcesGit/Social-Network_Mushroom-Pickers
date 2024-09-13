@@ -1,3 +1,5 @@
+let rerenderEntireTree = () => {};
+
 const state = {
     profilePage: {
         posts: [
@@ -28,11 +30,14 @@ export const addPost = (postMessage) => {
     const newPost = { id: 5, post: state.profilePage.newPostText, likesCount: 0 };
     state.profilePage.posts.push(newPost);
     state.profilePage.newPostText = "";
+    rerenderEntireTree(state);
 };
-///////не очищается инпут
 
 export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
 };
-
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
+};
 export default state;
