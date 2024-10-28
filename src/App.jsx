@@ -6,6 +6,7 @@ import Navbar from "./components/navbar/Navbar";
 import Profile from "./pages/profile/Profile";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 
 function App(props) {
     return (
