@@ -31,6 +31,12 @@ function App(props) {
                             path="/dialogs"
                             element={<Dialogs dialogsState={props.state.dialogsPage} />}
                         />
+                        <Route
+                            ///////////////
+
+                            path="/news"
+                            element={<Dialogs dialogsState={props.state.dialogsPage} />}
+                        />
                     </Routes>
                 </main>
                 <Footer />
