@@ -15,6 +15,7 @@ function App(props) {
                 <Header />
                 <Navbar />
                 <main className="main">
+                    {/* ////////// */}
                     <Routes>
                         <Route
                             path="/profile"
