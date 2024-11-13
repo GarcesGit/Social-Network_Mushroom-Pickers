@@ -37,14 +37,14 @@ const Navbar = () => {
                     Music
                 </NavLink>
             </div>
-            <div className={cl.item}>
+            {/* <div className={cl.item}>
                 <NavLink
                     to="/settings"
                     className={({ isActive }) => (isActive ? cl.activeLink : null)}
                 >
                     Settings
                 </NavLink>
-            </div>
+            </div> */}
         </nav>
     );
 };
