@@ -29,14 +29,14 @@ const Navbar = () => {
                     News
                 </NavLink>
             </div>
-            <div className={cl.item}>
+            {/* <div className={cl.item}>
                 <NavLink
                     to="/music"
                     className={({ isActive }) => (isActive ? cl.activeLink : null)}
                 >
                     Music
                 </NavLink>
-            </div>
+            </div> */}
             {/* <div className={cl.item}>
                 <NavLink
                     to="/settings"
