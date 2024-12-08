@@ -1,5 +1,5 @@
-let store = {
-    state: {
+const store = {
+    _state: {
         profilePage: {
             posts: [
                 { id: 1, post: "Yesterday I saw ducks", likesCount: 3 },
@@ -24,24 +24,28 @@ let store = {
             ],
         },
     },
-
-    rerenderEntireTree() {
+    getState() {
+        return this._state;
+    },
+    _callSubscriber() {
         console.log("state changed");
     },
-
-    addPost(postMessage) {
-        const newPost = { id: 5, post: state.profilePage.newPostText, likesCount: 0 };
-        state.profilePage.posts.push(newPost);
-        state.profilePage.newPostText = "";
-        rerenderEntireTree(state);
+    addPost() {
+        const newPost = {
+            id: 5,
+            post: this._state.profilePage.newPostText,
+            likesCount: 0,
+        };
+        this._state.profilePage.posts.push(newPost);
+        this._state.profilePage.newPostText = "";
+        this._callSubscriber(this._state);
     },
-
     updateNewPostText(newText) {
-        state.profilePage.newPostText = newText;
-        rerenderEntireTree(state);
+        this._state.profilePage.newPostText = newText;
+        this._callSubscriber(this._state);
     },
     subscribe(observer) {
-        rerenderEntireTree = observer;
+        this._callSubscriber = observer;
     },
 };
 

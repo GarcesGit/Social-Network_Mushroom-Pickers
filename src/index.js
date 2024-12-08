@@ -7,18 +7,18 @@ import store from "./redux/state";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-let rerenderEntireTree = (state) => {
+const rerenderEntireTree = (state) => {
     root.render(
         <React.StrictMode>
             <App
-                state={store.state}
+                state={store.getState()}
                 addPost={store.addPost}
                 updateNewPostText={store.updateNewPostText}
             />
         </React.StrictMode>
     );
 };
-rerenderEntireTree(store.state);
+rerenderEntireTree(store.getState());
 store.subscribe(rerenderEntireTree);
 
 reportWebVitals();
