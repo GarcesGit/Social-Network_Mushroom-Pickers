@@ -2,8 +2,6 @@ const store = {
     _state: {
         profilePage: {
             posts: [
-                { id: 1, post: "Yesterday I saw ducks", likesCount: 3 },
-                { id: 2, post: "They were fat and nice", likesCount: 5 },
                 { id: 3, post: "Today so cold", likesCount: 7 },
                 { id: 4, post: "and wet", likesCount: 9 },
             ],
