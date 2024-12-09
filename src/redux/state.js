@@ -28,6 +28,10 @@ const store = {
     _callSubscriber() {
         console.log("state changed");
     },
+    subscribe(observer) {
+        this._callSubscriber = observer;
+    },
+
     addPost() {
         const newPost = {
             id: 5,
@@ -41,9 +45,6 @@ const store = {
     updateNewPostText(newText) {
         this._state.profilePage.newPostText = newText;
         this._callSubscriber(this._state);
-    },
-    subscribe(observer) {
-        this._callSubscriber = observer;
     },
 };
 

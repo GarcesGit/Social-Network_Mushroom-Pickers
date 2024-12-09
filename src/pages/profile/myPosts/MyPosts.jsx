@@ -11,6 +11,7 @@ const MyPosts = (props) => {
 
     const addPosts = () => {
         props.addPost();
+        newPostElement.current.value = "";
     };
     const onInputChange = () => {
         const text = newPostElement.current.value;
