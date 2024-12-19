@@ -30,7 +30,7 @@ function App(props) {
                             path="/dialogs"
                             element={<Dialogs dialogsState={props.state.dialogsPage} />}
                         />
-                        {/* <Route
+                        <Route
                             path="/news"
                             element={<News dialogsState={props.state.dialogsPage} />}
                         />
@@ -41,7 +41,7 @@ function App(props) {
                         <Route
                             path="/settings"
                             element={<Dialogs dialogsState={props.state.dialogsPage} />}
-                        /> */}
+                        />
                     </Routes>
                 </main>
                 <Footer />
