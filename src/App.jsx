@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
-function App(props) {
+const App = (props) => {
     return (
         <BrowserRouter>
             <div className="wrapper">
@@ -48,6 +48,6 @@ function App(props) {
             </div>
         </BrowserRouter>
     );
-}
+};
 
 export default App;
