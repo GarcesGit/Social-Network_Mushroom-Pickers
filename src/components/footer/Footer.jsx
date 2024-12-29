@@ -16,7 +16,7 @@ const Footer = () => {
             <a href="mailto:nataly.garces.company@gmail.com" target="_blank">
                 <img src={mail_img} alt="" className={cl.social_img} />
             </a>
-            <p>Nataly Garces Studio &copy; 2023</p>
+            <p>Nataly Garces Studio &copy; 2025</p>
         </div>
     );
 };
