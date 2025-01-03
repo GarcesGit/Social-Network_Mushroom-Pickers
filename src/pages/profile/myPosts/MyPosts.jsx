@@ -22,6 +22,7 @@ const MyPosts = (props) => {
         const action = updateNewPostTextActionCreator(text);
         props.dispatch(action);
     };
+
     return (
         <div>
             <h3>My posts</h3>

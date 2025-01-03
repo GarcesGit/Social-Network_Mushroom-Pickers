@@ -19,7 +19,8 @@ const Dialogs = (props) => {
 
     const addMessage = () => {
         const text = newMessage.current.value;
-        alert(text); //переписать - text записывается в стейт и в UI
+        props.dispatch(addPostsActionCreator());
+        newMessage.current.value = "";
     };
 
     return (
