@@ -23,6 +23,7 @@ const store = {
                 { id: 3, message: "Yo" },
                 { id: 4, message: "Yo man" },
             ],
+            newMessageBody: "",
         },
     },
     getState() {
