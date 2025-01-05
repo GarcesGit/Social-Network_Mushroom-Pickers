@@ -6,7 +6,7 @@ const Input = React.forwardRef((props, ref) => {
         <input
             type="text"
             className={cl.inputBS}
-            placeholder="my text"
+            placeholder="your text"
             aria-label="text"
             aria-describedby="button-addon2"
             ref={ref}
