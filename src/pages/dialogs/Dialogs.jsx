@@ -8,7 +8,7 @@ import { useRef } from "react";
 import {
     sendMessageActionCreator,
     updateNewMessageBodyActionCreator,
-} from "../../redux/state";
+} from "../../redux/dialogsReducer";
 
 const Dialogs = (props) => {
     const dialogElements = props.dialogsState.dialogs.map((d) => (

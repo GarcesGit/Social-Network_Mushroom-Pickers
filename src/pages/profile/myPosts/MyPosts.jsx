@@ -5,7 +5,7 @@ import Button from "../../../components/UI/input/button/Button";
 import {
     addPostsActionCreator,
     updateNewPostTextActionCreator,
-} from "../../../redux/state";
+} from "../../../redux/profileReducer";
 
 const MyPosts = (props) => {
     const postElements = props.posts.map((p) => (
