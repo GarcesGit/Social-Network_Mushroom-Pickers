@@ -3,30 +3,8 @@ import dialogsReducer from "./dialogsReducer";
 
 const store = {
     _state: {
-        profilePage: {
-            posts: [
-                { id: 3, post: "Today so cold", likesCount: 7 },
-                { id: 4, post: "and wet", likesCount: 9 },
-            ],
-            newPostText: "чет",
-        },
-        dialogsPage: {
-            dialogs: [
-                { id: 1, name: "Name1" },
-                { id: 2, name: "Name2" },
-                { id: 3, name: "Name3" },
-                { id: 4, name: "Name4" },
-                { id: 5, name: "Name5" },
-            ],
-            messages: [
-                { id: 1, message: "Hi" },
-                { id: 2, message: "How are u" },
-                { id: 3, message: "Yo" },
-                { id: 4, message: "Yo man" },
-                { id: 5, message: "Yo chick" },
-            ],
-            newMessageBody: "",
-        },
+        profilePage: {},
+        dialogsPage: {},
     },
 
     getState() {
