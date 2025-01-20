@@ -2,25 +2,22 @@ import React, { useRef } from "react";
 import Post from "./post/Post";
 import Input from "../../../components/UI/input/Input";
 import Button from "../../../components/UI/input/button/Button";
-import {
-    addPostsActionCreator,
-    updateNewPostTextActionCreator,
-} from "../../../redux/profileReducer";
 
 const MyPosts = (props) => {
     const postElements = props.posts.map((p) => (
         <Post post={p.post} likesCount={p.likesCount} />
     ));
+
     const newPostElement = useRef();
 
-    const addPosts = () => {
-        props.dispatch(addPostsActionCreator());
+    const onAddPost = () => {
+        props.addPosts();
         newPostElement.current.value = "";
     };
-    const updateNewPostText = () => {
+
+    const onPostChange = () => {
         const text = newPostElement.current.value;
-        const action = updateNewPostTextActionCreator(text);
-        props.dispatch(action);
+        props.updateNewPostText(text);
     };
 
     return (
@@ -28,8 +25,8 @@ const MyPosts = (props) => {
             <h3>My posts</h3>
             <div>
                 <div className="input-group mb-3">
-                    <Input ref={newPostElement} change={updateNewPostText} />
-                    <Button buttonText="Click" click={addPosts} />
+                    <Input ref={newPostElement} change={onPostChange} />
+                    <Button buttonText="Click" click={onAddPost} />
                 </div>
             </div>
             {postElements}
