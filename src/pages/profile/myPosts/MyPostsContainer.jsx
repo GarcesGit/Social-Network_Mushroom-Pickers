@@ -16,13 +16,11 @@ const MyPostsContainer = (props) => {
     };
 
     return (
-        <>
-            <MyPosts
-                addPosts={addPosts}
-                updateNewPostText={updateNewPostText}
-                posts={props.posts}
-            />
-        </>
+        <MyPosts
+            addPosts={addPosts}
+            updateNewPostText={updateNewPostText}
+            posts={props.posts}
+        />
     );
 };
 

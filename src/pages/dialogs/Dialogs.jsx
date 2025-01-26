@@ -10,6 +10,7 @@ import {
     updateNewMessageBodyActionCreator,
 } from "../../redux/dialogsReducer";
 
+//переделать в DialogsContainer & Dialogs
 const Dialogs = (props) => {
     const dialogElements = props.dialogsState.dialogs.map((d) => (
         <DialogItem id={d.id} name={d.name} />
@@ -27,7 +28,7 @@ const Dialogs = (props) => {
         props.dispatch(action);
     };
 
-    const onAddMessageClick = () => {
+    const onSendMessageClick = () => {
         props.dispatch(sendMessageActionCreator());
         newMessage.current.value = "";
     };
@@ -40,7 +41,7 @@ const Dialogs = (props) => {
             <div></div>
             <div className="input-group mb-3">
                 <Input ref={newMessage} change={onUpdateNewMessageBody} />
-                <Button buttonText="Click" click={onAddMessageClick} />
+                <Button buttonText="Click" click={onSendMessageClick} />
             </div>
         </div>
     );
