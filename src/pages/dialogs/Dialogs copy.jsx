@@ -10,6 +10,7 @@ import {
     updateNewMessageBodyActionCreator,
 } from "../../redux/dialogsReducer";
 
+//переделать в DialogsContainer & Dialogs
 const Dialogs = (props) => {
     const dialogElements = props.dialogsState.dialogs.map((d) => (
         <DialogItem id={d.id} name={d.name} />

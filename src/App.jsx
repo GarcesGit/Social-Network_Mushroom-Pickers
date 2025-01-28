@@ -1,5 +1,4 @@
 import "./App.css";
-import Dialogs from "./pages/dialogs/Dialogs";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Navbar from "./components/navbar/Navbar";
@@ -7,6 +6,7 @@ import Profile from "./pages/profile/Profile";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import DialogsContainer from "./pages/dialogs/DialogsContainer";
 
 const App = (props) => {
     return (
@@ -29,7 +29,7 @@ const App = (props) => {
                         <Route
                             path="/dialogs"
                             element={
-                                <Dialogs
+                                <DialogsContainer
                                     dialogsState={props.state.dialogsPage}
                                     dispatch={props.dispatch}
                                 />
