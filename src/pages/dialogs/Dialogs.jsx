@@ -5,10 +5,6 @@ import Message from "./message/Message";
 import Input from "../../components/UI/input/Input";
 import Button from "../../components/UI/input/button/Button";
 import { useRef } from "react";
-import {
-    sendMessageActionCreator,
-    updateNewMessageBodyActionCreator,
-} from "../../redux/dialogsReducer";
 
 const Dialogs = (props) => {
     const dialogElements = props.dialogsState.dialogs.map((d) => (
@@ -23,12 +19,9 @@ const Dialogs = (props) => {
 
     const onUpdateNewMessageBody = () => {
         const body = newMessage.current.value;
-        const action = updateNewMessageBodyActionCreator(body);
-        props.dispatch(action);
     };
 
     const onSendMessageClick = () => {
-        props.dispatch(sendMessageActionCreator());
         newMessage.current.value = "";
     };
 
