@@ -17,12 +17,14 @@ const Dialogs = (props) => {
 
     const newMessage = useRef();
 
-    const onUpdateNewMessageBody = () => {
-        const body = newMessage.current.value;
+    const onSendMessageClick = () => {
+        props.onSendMessageClick();
+        newMessage.current.value = "";
     };
 
-    const onSendMessageClick = () => {
-        newMessage.current.value = "";
+    const onUpdateNewMessageBody = () => {
+        const body = newMessage.current.value;
+        props.onUpdateNewMessageBody(body);
     };
 
     return (
