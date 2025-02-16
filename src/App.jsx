@@ -5,12 +5,13 @@ import Navbar from "./components/navbar/Navbar";
 import Profile from "./pages/profile/Profile";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
 import DialogsContainer from "./pages/dialogs/DialogsContainer";
+import { Provider } from "react-redux";
 
 const App = (props) => {
     return (
         <BrowserRouter>
+            {/* <Provider> */}
             <div className="wrapper">
                 <Header />
                 <Navbar />
@@ -51,6 +52,7 @@ const App = (props) => {
                 </main>
                 <Footer />
             </div>
+            {/* </Provider> */}
         </BrowserRouter>
     );
 };
